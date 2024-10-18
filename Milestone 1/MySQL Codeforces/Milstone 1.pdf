@@ -1,0 +1,58 @@
+CREATE DATABASE IF NOT EXISTS codeforces_db;
+USE codeforces_db;
+ -- Contest table
+CREATE TABLE IF NOT EXISTS Contest (
+    ContestID INT PRIMARY KEY,
+    Name_ VARCHAR(255) NOT NULL,
+    Date_ DATETIME NOT NULL, 
+    Division VARCHAR(100),
+    Writers VARCHAR(255), 
+    RegisteredParticipants INT,
+    FinalStanding INT
+);
+
+-- ProblemSet table
+CREATE TABLE IF NOT EXISTS ProblemSet (
+    ProblemSetID INT PRIMARY KEY,
+    Name_ VARCHAR(255) NOT NULL,
+    Tags VARCHAR(255),
+    TimeLimit INT, 
+    MemoryLimit INT  
+);
+
+-- User table
+CREATE TABLE IF NOT EXISTS User_ (
+    UserID INT PRIMARY KEY,
+    ScreenName VARCHAR(255) NOT NULL,
+    City VARCHAR(100),
+    Country VARCHAR(100),
+    Organization_ VARCHAR(255),
+    Contributions INT,
+    FriendsCount INT,
+    RegistrationDuration INT,  
+    ProblemsSolved INT,
+    Streaks INT
+);
+-- Attempt table
+CREATE TABLE IF NOT EXISTS Attempt (
+    AttemptID INT PRIMARY KEY,
+    UserID INT,
+    ProblemID INT,
+    Date_ DATETIME NOT NULL,  
+   Verdict CHAR(8) NOT NULL CHECK (Verdict IN ('Accepted', 'Rejected')), -- Verdict Accepted or Rejected
+    Language_ VARCHAR(100),
+    TimeSpent INT,  
+    MemoryUsed INT,  
+    FOREIGN KEY (UserID) REFERENCES User_(UserID),
+    FOREIGN KEY (ProblemSetID) REFERENCES ProblemSet(ProblemSetID)
+);
+
+-- Participation table
+CREATE TABLE IF NOT EXISTS Participation (
+    ParticipationID INT PRIMARY KEY,
+    UserID INT,
+    ContestID INT,
+    FinalStanding INT,
+    FOREIGN KEY (UserID) REFERENCES User_(UserID),
+    FOREIGN KEY (ContestID) REFERENCES Contest(ContestID)
+);
