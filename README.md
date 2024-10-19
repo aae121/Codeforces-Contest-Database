@@ -59,4 +59,4 @@ The database schema includes tables for:
 - **Pycharm**: Integrated Development Environment (IDE) used for development.
 
 ## Acknowledgments
-This project is part of the AUC coursework, focusing on data aggregation, web crawling, and database management using Codeforces data, under the supervision of Prof. Mohamed Alhalaby.
+This project is part of the AUC Fundementals of Database Systems Course, focusing on data aggregation, web crawling, and database management using Codeforces data, under the supervision of Prof. Mohamed Alhalaby.
