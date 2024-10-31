@@ -1,4 +1,4 @@
-# Codeforces-Contest-Database
+# Codeforces-Webscrapping
 
 ## Overview
 This project is a database application built to gather, store, and analyze data from **Codeforces** contests. It aims to provide more flexible filtering, ranking, and aggregation features beyond what is available on the Codeforces platform. Users can log in to view their contest participation, problem attempts, and analyze trends in competitive programming.
