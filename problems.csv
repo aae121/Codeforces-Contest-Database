@@ -1,0 +1,310 @@
+Name,Problem ID,Tags,Time Limit,Memory Limit,Description
+Peak Productivity Forces,2035H,constructive algorithms,N/A,N/A,N/A
+Go Learn! (Hard Version),2035G2,"divide and conquer, dp",N/A,N/A,N/A
+Go Learn! (Easy Version),2035G1,"dp, trees",N/A,N/A,N/A
+Tree Operations,2035F,"binary search, brute force, dfs and similar, dp, trees",N/A,N/A,N/A
+Monster,2035E,"binary search, brute force, constructive algorithms, implementation, math",N/A,N/A,N/A
+Yet Another Real Number Problem,2035D,"data structures, greedy, math",N/A,N/A,N/A
+Alya and Permutation,2035C,"bitmasks, constructive algorithms, math",N/A,N/A,N/A
+Everyone Loves Tres,2035B,"constructive algorithms, greedy, math, number theory",N/A,N/A,N/A
+Sliding,2035A,"implementation, math",N/A,N/A,N/A
+Sakurako and Chefir,2033G,"data structures, dfs and similar, dp, greedy, trees",N/A,N/A,N/A
+Kosuke's Sloth,2033F,"brute force, math, number theory",N/A,N/A,N/A
+"Sakurako, Kosuke, and the Permutation",2033E,"brute force, data structures, dfs and similar, dsu, graphs, greedy, math",N/A,N/A,N/A
+2033D,Kousuke's Assignment,"data structures, dp, dsu, greedy, math",2 seconds,256 megabytes,"After a trip with Sakurako, Kousuke was very scared because he forgot about his programming assignment. In this assignment, the teacher gave him an array $$$a$$$ of $$$n$$$ integers and asked him to calculate the number ofnon-overlappingsegments of the array $$$a$$$, such that each segment is consideredbeautiful.A segment $$$[l,r]$$$ is consideredbeautifulif $$$a_l + a_{l+1} + \dots + a_{r-1} + a_r=0$$$.For a fixed array $$$a$$$, your task is to compute the maximum number of non-overlappingbeautifulsegments.
+
+Sample Tests:
+ExampleInput352 1 -3 2 1712 -4 4 43 -3 -5 860 -4 0 3 0 1Output1
+2
+3"
+2033C,Sakurako's Field Trip,"dp, greedy, two pointers",2 seconds,256 megabytes,"Even in university, students need to relax. That is why Sakurakos teacher decided to go on a field trip. It is known that all of the students will be walking in one line. The student with index $$$i$$$ has some topic of interest which is described as $$$a_i$$$. As a teacher, you want to minimise thedisturbanceof the line of students.Thedisturbanceof the line is defined as the number of neighbouring people with the same topic of interest. In other words,disturbanceis the number of indices $$$j$$$ ($$$1 \le j < n$$$) such that $$$a_j = a_{j + 1}$$$.In order to do this, you can choose index $$$i$$$ ($$$1\le i\le n$$$) and swap students at positions $$$i$$$ and $$$n-i+1$$$. You can perform any number of swaps.Your task is to determine the minimal amount ofdisturbancethat you can achieve by doing the operation described above any number of times.
+
+Sample Tests:
+ExampleInput951 1 1 2 362 1 2 2 1 141 2 1 162 1 1 2 2 442 1 2 361 2 2 1 2 154 5 5 1 571 4 3 5 1 1 373 1 3 2 2 3 3Output1
+2
+1
+0
+0
+1
+1
+0
+2"
+2033B,Sakurako and Water,"brute force, constructive algorithms, greedy",2 seconds,256 megabytes,"During her journey with Kosuke, Sakurako and Kosuke found a valley that can be represented as a matrix of size $$$n \times n$$$, where at the intersection of the $$$i$$$-th row and the $$$j$$$-th column is a mountain with a height of $$$a_{i,j}$$$. If $$$a_{i,j} < 0$$$, then there is a lake there.Kosuke is very afraid of water, so Sakurako needs to help him:With her magic, she can select a square area of mountains and increase the height of each mountain on the main diagonal of that area by exactly one.More formally, she can choose a submatrix with the upper left corner located at $$$(i, j)$$$ and the lower right corner at $$$(p, q)$$$, such that $$$p-i=q-j$$$. She can then add one to each element at the intersection of the $$$(i + k)$$$-th row and the $$$(j + k)$$$-th column, for all $$$k$$$ such that $$$0 \le k \le p-i$$$.Determine the minimum number of times Sakurako must use her magic so that there are no lakes.
+
+Sample Tests:
+ExampleInput4112-1 23 031 2 3-2 1 -10 0 -151 1 -1 -1 3-3 1 4 4 -4-1 -1 3 0 -54 5 3 -3 -13 1 -3 -1 5Output0
+1
+4
+19"
+2033A,Sakurako and Kosuke,"constructive algorithms, implementation, math",1 second,256 megabytes,"Sakurako and Kosuke decided to play some games with a dot on a coordinate line. The dot is currently located in position $$$x=0$$$. They will be taking turns, andSakurako will be the one to start.On the $$$i$$$-th move, the current player will move the dot in some direction by $$$2\cdot i-1$$$ units. Sakurako will always be moving the dot in the negative direction, whereas Kosuke will always move it in the positive direction.In other words, the following will happen:Sakurako will change the position of the dot by $$$-1$$$, $$$x = -1$$$ nowKosuke will change the position of the dot by $$$3$$$, $$$x = 2$$$ nowSakurako will change the position of the dot by $$$-5$$$, $$$x = -3$$$ now$$$\cdots$$$They will keep on playing while the absolute value of the coordinate of the dot does not exceed $$$n$$$. More formally, the game continues while $$$-n\le x\le n$$$. It can be proven that the game will always end.Your task is to determine who will be the one who makes the last turn.
+
+Sample Tests:
+ExampleInput416398OutputKosuke
+Sakurako
+Kosuke
+Sakurako"
+2030G2,The Destruction of the Universe (Hard Version),"combinatorics, math",4 seconds,512 megabytes,"This is the hard version of the problem. In this version, $$$n \leq 10^6$$$. You can only make hacks if both versions of the problem are solved.Orangutans are powerful beings—so powerful that they only need $$$1$$$ unit of time to destroy every vulnerable planet in the universe!There are $$$n$$$ planets in the universe. Each planet has aninterval of vulnerability$$$[l, r]$$$, during which it will be exposed to destruction by orangutans. Orangutans can also expand theinterval of vulnerabilityof any planet by $$$1$$$ unit.Specifically, suppose the expansion is performed on planet $$$p$$$ withinterval of vulnerability$$$[l_p, r_p]$$$. Then, the resultinginterval of vulnerabilitymay be either $$$[l_p - 1, r_p]$$$ or $$$[l_p, r_p + 1]$$$.Given a set of planets, orangutans can destroy all planets if theintervals of vulnerabilityof all planets in the set intersect at least one common point. Let thescoreof such a set denote the minimum number of expansions that must be performed.Orangutans are interested in the sum ofscoresof allnon-emptysubsets of the planets in the universe. As the answer can be large, output it modulo $$$998\,244\,353$$$.
+
+Sample Tests:
+ExampleInput331 12 33 341 42 32 41 151 22 33 44 51 5Output5
+6
+24"
+2030G1,The Destruction of the Universe (Easy Version),"combinatorics, greedy, math",4 seconds,512 megabytes,"This is the easy version of the problem. In this version, $$$n \leq 5000$$$. You can only make hacks if both versions of the problem are solved.Orangutans are powerful beings—so powerful that they only need $$$1$$$ unit of time to destroy every vulnerable planet in the universe!There are $$$n$$$ planets in the universe. Each planet has aninterval of vulnerability$$$[l, r]$$$, during which it will be exposed to destruction by orangutans. Orangutans can also expand theinterval of vulnerabilityof any planet by $$$1$$$ unit.Specifically, suppose the expansion is performed on planet $$$p$$$ withinterval of vulnerability$$$[l_p, r_p]$$$. Then, the resultinginterval of vulnerabilitymay be either $$$[l_p - 1, r_p]$$$ or $$$[l_p, r_p + 1]$$$.Given a set of planets, orangutans can destroy all planets if theintervals of vulnerabilityof all planets in the set intersect at least one common point. Let thescoreof such a set denote the minimum number of expansions that must be performed.Orangutans are interested in the sum ofscoresof allnon-emptysubsets of the planets in the universe. As the answer can be large, output it modulo $$$998\,244\,353$$$.
+
+Sample Tests:
+ExampleInput331 12 33 341 42 32 41 151 22 33 44 51 5Output5
+6
+24"
+2030F,Orangutan Approved Subarrays,"binary search, data structures, dp, greedy, implementation, two pointers",3 seconds,512 megabytes,"Suppose you have an array $$$b$$$. Initially, you also have a set $$$S$$$ that contains all distinct elements of $$$b$$$. The array $$$b$$$ is calledorangutan-approvedif it can beemptiedby repeatedly performing the following operation:In one operation, select indices $$$l$$$ and $$$r$$$ ($$$1 \leq l \leq r \leq |b|$$$) such that $$$v = b_l = b_{l+1} = \ldots = b_r$$$ and $$$v$$$ is present in $$$S$$$. Remove $$$v$$$ from $$$S$$$, and simultaneously remove all $$$b_i$$$ such that $$$l \leq i \leq r$$$. Then, reindex the elements $$$b_{r+1}, b_{r+2}, \ldots$$$ as $$$b_l, b_{l+1}, \ldots$$$ accordingly.You are given an array $$$a$$$ of length $$$n$$$ and $$$q$$$ queries.Each query consists of two indices $$$l$$$ and $$$r$$$ ($$$1 \le l \le r \le n$$$), and you need to determine whether or not the subarray $$$a_{l}, a_{l+1}, \ldots, a_r$$$ isorangutan-approved.
+
+Sample Tests:
+ExampleInput34 21 2 2 11 41 35 31 2 1 2 12 53 51 38 41 2 3 2 1 3 2 31 52 83 56 8OutputYES
+YES
+NO
+YES
+YES
+YES
+NO
+YES
+YES"
+2030E,MEXimize the Score,"combinatorics, data structures, dp, greedy, implementation, math",2 seconds,256 megabytes,"Suppose we partition the elements of an array $$$b$$$ into any number $$$k$$$ of non-empty multisets $$$S_1, S_2, \ldots, S_k$$$, where $$$k$$$ is an arbitrary positive integer. Define thescoreof $$$b$$$ as the maximum value of $$$\operatorname{MEX}(S_1)$$$$$$^{\text{∗}}$$$$$$ + \operatorname{MEX}(S_2) + \ldots + \operatorname{MEX}(S_k)$$$ over all possible partitions of $$$b$$$ for any integer $$$k$$$.Envy is given an array $$$a$$$ of size $$$n$$$. Since he knows that calculating thescoreof $$$a$$$ is too easy for you, he instead asks you to calculate the sum ofscoresof all $$$2^n - 1$$$ non-empty subsequences of $$$a$$$.$$$^{\text{†}}$$$ Since this answer may be large, please output it modulo $$$998\,244\,353$$$.$$$^{\text{∗}}$$$$$$\operatorname{MEX}$$$ of a collection of integers $$$c_1, c_2, \ldots, c_k$$$ is defined as the smallest non-negative integer $$$x$$$ that does not occur in the collection $$$c$$$. For example, $$$\operatorname{MEX}([0,1,2,2]) = 3$$$ and $$$\operatorname{MEX}([1,2,2]) = 0$$$$$$^{\text{†}}$$$A sequence $$$x$$$ is a subsequence of a sequence $$$y$$$ if $$$x$$$ can be obtained from $$$y$$$ by deleting several (possibly, zero or all) elements.
+
+Sample Tests:
+ExampleInput430 0 140 0 1 150 0 1 2 241 1 1 1Output11
+26
+53
+0"
+2030D,QED's Favorite Permutation,"data structures, implementation, sortings",2 seconds,256 megabytes,"QED is given a permutation$$$^{\text{∗}}$$$ $$$p$$$ of length $$$n$$$. He also has a string $$$s$$$ of length $$$n$$$ containing only characters $$$\texttt{L}$$$ and $$$\texttt{R}$$$. QED only likes permutations that are sorted in non-decreasing order. To sort $$$p$$$, he can select any of the following operations and perform them any number of times:Choose an index $$$i$$$ such that $$$s_i = \texttt{L}$$$. Then, swap $$$p_i$$$ and $$$p_{i-1}$$$. It is guaranteed that $$$s_1 \neq \texttt{L}$$$.Choose an index $$$i$$$ such that $$$s_i = \texttt{R}$$$. Then, swap $$$p_i$$$ and $$$p_{i+1}$$$. It is guaranteed that $$$s_n \neq \texttt{R}$$$.He is also given $$$q$$$ queries. In each query, he selects an index $$$i$$$ and changes $$$s_i$$$ from $$$\texttt{L}$$$ to $$$\texttt{R}$$$ (or from $$$\texttt{R}$$$ to $$$\texttt{L}$$$). Note that the changes arepersistent.After each query, he asks you if it is possible to sort $$$p$$$ in non-decreasing order by performing the aforementioned operations any number of times. Note that before answering each query, the permutation $$$p$$$ is reset to its original form.$$$^{\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array).
+
+Sample Tests:
+ExampleInput35 31 4 2 5 3RLRLL2438 51 5 2 4 8 3 6 7RRLLRRRL435346 21 2 3 4 5 6RLRLRL45OutputYES
+YES
+NO
+NO
+YES
+NO
+NO
+NO
+YES
+YES"
+2030C,A TRUE Battle,"brute force, games, greedy",2 seconds,256 megabytes,"Alice and Bob are playing a game. There is a list of $$$n$$$ booleans, each of which is eithertrueorfalse, given as a binary string $$$^{\text{∗}}$$$ of length $$$n$$$ (where $$$\texttt{1}$$$ representstrue, and $$$\texttt{0}$$$ representsfalse). Initially, there are no operators between the booleans.Alice and Bob will take alternate turns placingandororbetween the booleans, with Alice going first. Thus, the game will consist of $$$n-1$$$ turns since there are $$$n$$$ booleans. Alice aims for the final statement to evaluate totrue, while Bob aims for it to evaluate tofalse. Given the list of boolean values, determine whether Alice will win if both players play optimally.To evaluate the final expression, repeatedly perform the following steps until the statement consists of a singletrueorfalse:If the statement contains anandoperator, choose any one and replace the subexpression surrounding it with its evaluation.Otherwise, the statement contains anoroperator. Choose any one and replace the subexpression surrounding theorwith its evaluation.For example, the expressiontrue or false and falseis evaluated astrue or (false and false)$$$=$$$true or false$$$=$$$true. It can be shown that the result of any compound statement is unique.$$$^{\text{∗}}$$$A binary string is a string that only consists of characters $$$\texttt{0}$$$ and $$$\texttt{1}$$$
+
+Sample Tests:
+ExampleInput5211301012101111111100100111111011801000010OutputYES
+NO
+YES
+YES
+NO"
+2030B,Minimise Oneness,"combinatorics, constructive algorithms, games, math",1.5 seconds,256 megabytes,"For an arbitrary binary string $$$t$$$$$$^{\text{∗}}$$$, let $$$f(t)$$$ be the number of non-empty subsequences$$$^{\text{†}}$$$ of $$$t$$$ that contain only $$$\mathtt{0}$$$, and let $$$g(t)$$$ be the number of non-empty subsequences of $$$t$$$ that contain at least one $$$\mathtt{1}$$$.Note that for $$$f(t)$$$ and for $$$g(t)$$$, each subsequence is counted as many times as it appears in $$$t$$$. E.g., $$$f(\mathtt{000}) = 7, g(\mathtt{100}) = 4$$$.We define theonenessof the binary string $$$t$$$ to be $$$|f(t)-g(t)|$$$, where for an arbitrary integer $$$z$$$, $$$|z|$$$ represents the absolute value of $$$z$$$.You are given a positive integer $$$n$$$. Find a binary string $$$s$$$ of length $$$n$$$ such that itsonenessis as small as possible. If there are multiple strings, you can print any of them.$$$^{\text{∗}}$$$A binary string is a string that only consists of characters $$$\texttt{0}$$$ and $$$\texttt{1}$$$.$$$^{\text{†}}$$$A sequence $$$a$$$ is a subsequence of a sequence $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements. For example, subsequences of $$$\mathtt{1011101}$$$ are $$$\mathtt{0}$$$, $$$\mathtt{1}$$$, $$$\mathtt{11111}$$$, $$$\mathtt{0111}$$$, but not $$$\mathtt{000}$$$ nor $$$\mathtt{11100}$$$.
+
+Sample Tests:
+ExampleInput3123Output0
+01
+010"
+2030A,A Gift From Orangutan,"constructive algorithms, greedy, math, sortings",1 second,256 megabytes,"While exploring the jungle, you have bumped into a rare orangutan with a bow tie! You shake hands with the orangutan and offer him some food and water. In return...The orangutan has gifted you an array $$$a$$$ of length $$$n$$$. Using $$$a$$$, you will construct two arrays $$$b$$$ and $$$c$$$, both containing $$$n$$$ elements, in the following manner:$$$b_i = \min(a_1, a_2, \ldots, a_i)$$$ for each $$$1 \leq i \leq n$$$.$$$c_i = \max(a_1, a_2, \ldots, a_i)$$$ for each $$$1 \leq i \leq n$$$.Define thescoreof $$$a$$$ as $$$\sum_{i=1}^n c_i - b_i$$$ (i.e. the sum of $$$c_i - b_i$$$ over all $$$1 \leq i \leq n$$$). Before you calculate thescore, you canshufflethe elements of $$$a$$$ however you want.Find the maximumscorethat you can get if you shuffle the elements of $$$a$$$ optimally.
+
+Sample Tests:
+ExampleInput316937 6 551 1 1 2 2Output0
+4
+4"
+2027E2,Bit Game (Hard Version),"bitmasks, dp, math",2 seconds,256 megabytes,"This is the hard version of this problem. The only difference is that you need to output the number of choices of games where Bob wins in this version, where the number of stones in each pile are not fixed. You must solve both versions to be able to hack.Alice and Bob are playing a familiar game where they take turns removing stones from $$$n$$$ piles. Initially, there are $$$x_i$$$ stones in the $$$i$$$-th pile, and it has an associated value $$$a_i$$$. A player can take $$$d$$$ stones away from the $$$i$$$-th pile if and only if both of the following conditions are met:$$$1 \le d \le a_i$$$, and$$$x \, \& \, d = d$$$, where $$$x$$$ is the current number of stones in the $$$i$$$-th pile and $$$\&$$$ denotes thebitwise AND operation.The player who cannot make a move loses, and Alice goes first.You're given the $$$a_i$$$ values of each pile, but the number of stones in the $$$i$$$-th pile has not been determined yet. For the $$$i$$$-th pile, $$$x_i$$$ can be any integer between $$$1$$$ and $$$b_i$$$, inclusive. That is, you can choose an array $$$x_1, x_2, \ldots, x_n$$$ such that the condition $$$1 \le x_i \le b_i$$$ is satisfied for all piles.Your task is to count the number of games where Bob wins if both players play optimally. Two games are considered different if the number of stones in any pile is different, i.e., the arrays of $$$x$$$ differ in at least one position.Since the answer can be very large, please output the result modulo $$$10^9 + 7$$$.
+
+Sample Tests:
+ExampleInput731 2 33 2 21134555 4 7 8 64 4 5 5 546 4 8 812 13 14 12392856133 46637598 1234567829384774 73775896 87654321265 12110 314677810235 275091182 428565855 72062973174522416 889934149 3394714 230851724Output4
+4
+0
+6552
+722019507
+541
+665443265"
+2027E1,Bit Game (Easy Version),"bitmasks, brute force, games, math",2 seconds,256 megabytes,"This is the easy version of this problem. The only difference is that you need to output the winner of the game in this version, and the number of stones in each pile are fixed. You must solve both versions to be able to hack.Alice and Bob are playing a familiar game where they take turns removing stones from $$$n$$$ piles. Initially, there are $$$x_i$$$ stones in the $$$i$$$-th pile, and it has an associated value $$$a_i$$$. A player can take $$$d$$$ stones away from the $$$i$$$-th pile if and only if both of the following conditions are met:$$$1 \le d \le a_i$$$, and$$$x \, \& \, d = d$$$, where $$$x$$$ is the current number of stones in the $$$i$$$-th pile and $$$\&$$$ denotes thebitwise AND operation.The player who cannot make a move loses, and Alice goes first.You're given the $$$a_i$$$ and $$$x_i$$$ values for each pile, please determine who will win the game if both players play optimally.
+
+Sample Tests:
+ExampleInput721 610 7310 8 1525 4 1448 32 65 647 45 126 94320 40 123 55 1512345 9876 86419 8641 16789 54321 7532 97532 1220 6444 61357 109 5569 90 85OutputBob
+Bob
+Bob
+Bob
+Bob
+Alice
+Alice"
+2027D2,The Endspeaker (Hard Version),"binary search, data structures, dp, greedy, implementation, two pointers",2 seconds,256 megabytes,"This is the hard version of this problem. The only difference is that you need to also output the number of optimal sequences in this version. You must solve both versions to be able to hack.You're given an array $$$a$$$ of length $$$n$$$, and an array $$$b$$$ of length $$$m$$$ ($$$b_i > b_{i+1}$$$ for all $$$1 \le i < m$$$). Initially, the value of $$$k$$$ is $$$1$$$. Your aim is to make the array $$$a$$$ empty by performing one of these two operations repeatedly:Type $$$1$$$ — If the value of $$$k$$$ is less than $$$m$$$ and the array $$$a$$$ isnot empty, you can increase the value of $$$k$$$ by $$$1$$$. This does not incur any cost.Type $$$2$$$ — You remove a non-empty prefix of array $$$a$$$, such that its sum does not exceed $$$b_k$$$. This incurs a cost of $$$m - k$$$.You need to minimize the total cost of the operations to make array $$$a$$$ empty. If it's impossible to do this through any sequence of operations, output $$$-1$$$. Otherwise, output the minimum total cost of the operations, and the number of sequences of operations which yield this minimum cost modulo $$$10^9 + 7$$$.Two sequences of operations are considered different if you choose a different type of operation at any step, or the size of the removed prefix is different at any step.
+
+Sample Tests:
+ExampleInput54 29 3 4 311 71 22019 1810 22 5 2 1 10 3 2 9 9 617 910 112 2 2 2 2 2 2 2 2 220 18 16 14 12 10 8 6 4 2 11 61032 16 8 4 2 1Output1 3
+-1
+2 11
+10 42
+4 1"
+2027D1,The Endspeaker (Easy Version),"binary search, dp, graphs, greedy, implementation, two pointers",2 seconds,256 megabytes,"This is the easy version of this problem. The only difference is that you only need to output the minimum total cost of operations in this version. You must solve both versions to be able to hack.You're given an array $$$a$$$ of length $$$n$$$, and an array $$$b$$$ of length $$$m$$$ ($$$b_i > b_{i+1}$$$ for all $$$1 \le i < m$$$). Initially, the value of $$$k$$$ is $$$1$$$. Your aim is to make the array $$$a$$$ empty by performing one of these two operations repeatedly:Type $$$1$$$ — If the value of $$$k$$$ is less than $$$m$$$ and the array $$$a$$$ isnot empty, you can increase the value of $$$k$$$ by $$$1$$$. This does not incur any cost.Type $$$2$$$ — You remove a non-empty prefix of array $$$a$$$, such that its sum does not exceed $$$b_k$$$. This incurs a cost of $$$m - k$$$.You need to minimize the total cost of the operations to make array $$$a$$$ empty. If it's impossible to do this through any sequence of operations, output $$$-1$$$. Otherwise, output the minimum total cost of the operations.
+
+Sample Tests:
+ExampleInput54 29 3 4 311 71 22019 1810 22 5 2 1 10 3 2 9 9 617 910 112 2 2 2 2 2 2 2 2 220 18 16 14 12 10 8 6 4 2 11 61032 16 8 4 2 1Output1
+-1
+2
+10
+4"
+2027C,Add Zeros,"brute force, data structures, dfs and similar, dp, graphs, greedy",3 seconds,256 megabytes,"You're given an array $$$a$$$ initially containing $$$n$$$ integers. In one operation, you must do the following:Choose a position $$$i$$$ such that $$$1 < i \le |a|$$$ and $$$a_i = |a| + 1 - i$$$, where $$$|a|$$$ is thecurrentsize of the array.Append $$$i - 1$$$ zeros onto the end of $$$a$$$.After performing this operation as many times as you want, what is the maximum possible length of the array $$$a$$$?
+
+Sample Tests:
+ExampleInput452 4 6 2 555 4 4 5 146 8 2 311Output10
+11
+10
+1"
+2027B,Stalin Sort,"brute force, greedy",1 second,256 megabytes,"Stalin Sort is a humorous sorting algorithm designed to eliminate elements which are out of place instead of bothering to sort them properly, lending itself to an $$$\mathcal{O}(n)$$$ time complexity.It goes as follows: starting from the second element in the array, if it is strictly smaller than the previous element (ignoring those which have already been deleted), then delete it. Continue iterating through the array until it is sorted in non-decreasing order. For example, the array $$$[1, 4, 2, 3, 6, 5, 5, 7, 7]$$$ becomes $$$[1, 4, 6, 7, 7]$$$ after a Stalin Sort.We define an array asvulnerableif you can sort it innon-increasingorder by repeatedly applying a Stalin Sort toany of its subarrays$$$^{\text{∗}}$$$, as many times as is needed.Given an array $$$a$$$ of $$$n$$$ integers, determine the minimum number of integers which must be removed from the array to make itvulnerable.$$$^{\text{∗}}$$$An array $$$a$$$ is a subarray of an array $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.
+
+Sample Tests:
+ExampleInput673 6 4 9 2 5 255 4 4 2 282 2 4 4 6 6 10 101100096 8 9 10 12 9 7 5 47300000000 600000000 400000000 900000000 200000000 400000000 200000000Output2
+0
+6
+0
+4
+2"
+2027A,Rectangle Arrangement,"geometry, implementation, math",1 second,256 megabytes,"You are coloring an infinite square grid, in which all cells are initially white. To do this, you are given $$$n$$$ stamps. Each stamp is a rectangle of width $$$w_i$$$ and height $$$h_i$$$.You will useeachstamp exactlyonceto color a rectangle of the same size as the stamp on the grid in black. You cannot rotate the stamp, and for each cell, the stamp must either cover it fully or not cover it at all. You can use the stamp at any position on the grid, even if some or all of the cells covered by the stamping area are already black.What is the minimum sum of theperimetersof the connected regions of black squares you can obtain after all the stamps have been used?
+
+Sample Tests:
+ExampleInput551 52 43 34 25 132 21 11 213 23100 100100 100100 10041 42 31 53 2Output20
+8
+10
+400
+16"
+2026F,Bermart Ice Cream,"data structures, dfs and similar, divide and conquer, dp, implementation, trees",2 seconds,1024 megabytes,"In the Bermart chain of stores, a variety of ice cream is sold. Each type of ice cream has two parameters: price and tastiness.Initially, there is one store numbered $$$1$$$, which sells nothing. You have to process $$$q$$$ queries of the following types:$$$1~x$$$ — a new store opens, that sells the same types of ice cream as store $$$x$$$. It receives the minimum available positive index. The order of the types of ice cream in the new store is the same as in store $$$x$$$.$$$2~x~p~t$$$ — a type of ice cream with price $$$p$$$ and tastiness $$$t$$$ becomes available in store $$$x$$$.$$$3~x$$$ — a type of ice cream that was available the longest (appeared the earliest) in store $$$x$$$ is removed.$$$4~x~p$$$ — for store $$$x$$$, find the maximum total tastiness of a subset of types of ice cream that are sold there, such that the total price does not exceed $$$p$$$ (each type can be used in the subset no more than once).
+
+Sample Tests:
+ExampleInput122 1 5 72 1 3 44 1 44 1 84 1 21 12 2 4 104 1 94 2 93 14 1 94 2 9Output4
+11
+0
+11
+17
+4
+17"
+2026E,Best Subsequence,"bitmasks, dfs and similar, flows, graph matchings, graphs",2 seconds,256 megabytes,"Given an integer array $$$a$$$ of size $$$n$$$.Let's define thevalueof the array as its size minus the number of set bits in the bitwise OR of all elements of the array.For example, for the array $$$[1, 0, 1, 2]$$$, the bitwise OR is $$$3$$$ (which contains $$$2$$$ set bits), and the value of the array is $$$4-2=2$$$.Your task is to calculate the maximum possible value of some subsequence of the given array.
+
+Sample Tests:
+ExampleInput430 0 041 0 1 21587 1 48 14 13 8 7 6Output3
+2
+0
+3"
+2033D,Kousuke's Assignment,"data structures, dp, dsu, greedy, math",2 seconds,256 megabytes,"After a trip with Sakurako, Kousuke was very scared because he forgot about his programming assignment. In this assignment, the teacher gave him an array $$$a$$$ of $$$n$$$ integers and asked him to calculate the number ofnon-overlappingsegments of the array $$$a$$$, such that each segment is consideredbeautiful.A segment $$$[l,r]$$$ is consideredbeautifulif $$$a_l + a_{l+1} + \dots + a_{r-1} + a_r=0$$$.For a fixed array $$$a$$$, your task is to compute the maximum number of non-overlappingbeautifulsegments.
+
+Sample Tests:
+ExampleInput352 1 -3 2 1712 -4 4 43 -3 -5 860 -4 0 3 0 1Output1
+2
+3"
+2033C,Sakurako's Field Trip,"dp, greedy, two pointers",2 seconds,256 megabytes,"Even in university, students need to relax. That is why Sakurakos teacher decided to go on a field trip. It is known that all of the students will be walking in one line. The student with index $$$i$$$ has some topic of interest which is described as $$$a_i$$$. As a teacher, you want to minimise thedisturbanceof the line of students.Thedisturbanceof the line is defined as the number of neighbouring people with the same topic of interest. In other words,disturbanceis the number of indices $$$j$$$ ($$$1 \le j < n$$$) such that $$$a_j = a_{j + 1}$$$.In order to do this, you can choose index $$$i$$$ ($$$1\le i\le n$$$) and swap students at positions $$$i$$$ and $$$n-i+1$$$. You can perform any number of swaps.Your task is to determine the minimal amount ofdisturbancethat you can achieve by doing the operation described above any number of times.
+
+Sample Tests:
+ExampleInput951 1 1 2 362 1 2 2 1 141 2 1 162 1 1 2 2 442 1 2 361 2 2 1 2 154 5 5 1 571 4 3 5 1 1 373 1 3 2 2 3 3Output1
+2
+1
+0
+0
+1
+1
+0
+2"
+2033B,Sakurako and Water,"brute force, constructive algorithms, greedy",2 seconds,256 megabytes,"During her journey with Kosuke, Sakurako and Kosuke found a valley that can be represented as a matrix of size $$$n \times n$$$, where at the intersection of the $$$i$$$-th row and the $$$j$$$-th column is a mountain with a height of $$$a_{i,j}$$$. If $$$a_{i,j} < 0$$$, then there is a lake there.Kosuke is very afraid of water, so Sakurako needs to help him:With her magic, she can select a square area of mountains and increase the height of each mountain on the main diagonal of that area by exactly one.More formally, she can choose a submatrix with the upper left corner located at $$$(i, j)$$$ and the lower right corner at $$$(p, q)$$$, such that $$$p-i=q-j$$$. She can then add one to each element at the intersection of the $$$(i + k)$$$-th row and the $$$(j + k)$$$-th column, for all $$$k$$$ such that $$$0 \le k \le p-i$$$.Determine the minimum number of times Sakurako must use her magic so that there are no lakes.
+
+Sample Tests:
+ExampleInput4112-1 23 031 2 3-2 1 -10 0 -151 1 -1 -1 3-3 1 4 4 -4-1 -1 3 0 -54 5 3 -3 -13 1 -3 -1 5Output0
+1
+4
+19"
+2033A,Sakurako and Kosuke,"constructive algorithms, implementation, math",1 second,256 megabytes,"Sakurako and Kosuke decided to play some games with a dot on a coordinate line. The dot is currently located in position $$$x=0$$$. They will be taking turns, andSakurako will be the one to start.On the $$$i$$$-th move, the current player will move the dot in some direction by $$$2\cdot i-1$$$ units. Sakurako will always be moving the dot in the negative direction, whereas Kosuke will always move it in the positive direction.In other words, the following will happen:Sakurako will change the position of the dot by $$$-1$$$, $$$x = -1$$$ nowKosuke will change the position of the dot by $$$3$$$, $$$x = 2$$$ nowSakurako will change the position of the dot by $$$-5$$$, $$$x = -3$$$ now$$$\cdots$$$They will keep on playing while the absolute value of the coordinate of the dot does not exceed $$$n$$$. More formally, the game continues while $$$-n\le x\le n$$$. It can be proven that the game will always end.Your task is to determine who will be the one who makes the last turn.
+
+Sample Tests:
+ExampleInput416398OutputKosuke
+Sakurako
+Kosuke
+Sakurako"
+2030G2,The Destruction of the Universe (Hard Version),"combinatorics, math",4 seconds,512 megabytes,"This is the hard version of the problem. In this version, $$$n \leq 10^6$$$. You can only make hacks if both versions of the problem are solved.Orangutans are powerful beings—so powerful that they only need $$$1$$$ unit of time to destroy every vulnerable planet in the universe!There are $$$n$$$ planets in the universe. Each planet has aninterval of vulnerability$$$[l, r]$$$, during which it will be exposed to destruction by orangutans. Orangutans can also expand theinterval of vulnerabilityof any planet by $$$1$$$ unit.Specifically, suppose the expansion is performed on planet $$$p$$$ withinterval of vulnerability$$$[l_p, r_p]$$$. Then, the resultinginterval of vulnerabilitymay be either $$$[l_p - 1, r_p]$$$ or $$$[l_p, r_p + 1]$$$.Given a set of planets, orangutans can destroy all planets if theintervals of vulnerabilityof all planets in the set intersect at least one common point. Let thescoreof such a set denote the minimum number of expansions that must be performed.Orangutans are interested in the sum ofscoresof allnon-emptysubsets of the planets in the universe. As the answer can be large, output it modulo $$$998\,244\,353$$$.
+
+Sample Tests:
+ExampleInput331 12 33 341 42 32 41 151 22 33 44 51 5Output5
+6
+24"
+2030G1,The Destruction of the Universe (Easy Version),"combinatorics, greedy, math",4 seconds,512 megabytes,"This is the easy version of the problem. In this version, $$$n \leq 5000$$$. You can only make hacks if both versions of the problem are solved.Orangutans are powerful beings—so powerful that they only need $$$1$$$ unit of time to destroy every vulnerable planet in the universe!There are $$$n$$$ planets in the universe. Each planet has aninterval of vulnerability$$$[l, r]$$$, during which it will be exposed to destruction by orangutans. Orangutans can also expand theinterval of vulnerabilityof any planet by $$$1$$$ unit.Specifically, suppose the expansion is performed on planet $$$p$$$ withinterval of vulnerability$$$[l_p, r_p]$$$. Then, the resultinginterval of vulnerabilitymay be either $$$[l_p - 1, r_p]$$$ or $$$[l_p, r_p + 1]$$$.Given a set of planets, orangutans can destroy all planets if theintervals of vulnerabilityof all planets in the set intersect at least one common point. Let thescoreof such a set denote the minimum number of expansions that must be performed.Orangutans are interested in the sum ofscoresof allnon-emptysubsets of the planets in the universe. As the answer can be large, output it modulo $$$998\,244\,353$$$.
+
+Sample Tests:
+ExampleInput331 12 33 341 42 32 41 151 22 33 44 51 5Output5
+6
+24"
+2030F,Orangutan Approved Subarrays,"binary search, data structures, dp, greedy, implementation, two pointers",3 seconds,512 megabytes,"Suppose you have an array $$$b$$$. Initially, you also have a set $$$S$$$ that contains all distinct elements of $$$b$$$. The array $$$b$$$ is calledorangutan-approvedif it can beemptiedby repeatedly performing the following operation:In one operation, select indices $$$l$$$ and $$$r$$$ ($$$1 \leq l \leq r \leq |b|$$$) such that $$$v = b_l = b_{l+1} = \ldots = b_r$$$ and $$$v$$$ is present in $$$S$$$. Remove $$$v$$$ from $$$S$$$, and simultaneously remove all $$$b_i$$$ such that $$$l \leq i \leq r$$$. Then, reindex the elements $$$b_{r+1}, b_{r+2}, \ldots$$$ as $$$b_l, b_{l+1}, \ldots$$$ accordingly.You are given an array $$$a$$$ of length $$$n$$$ and $$$q$$$ queries.Each query consists of two indices $$$l$$$ and $$$r$$$ ($$$1 \le l \le r \le n$$$), and you need to determine whether or not the subarray $$$a_{l}, a_{l+1}, \ldots, a_r$$$ isorangutan-approved.
+
+Sample Tests:
+ExampleInput34 21 2 2 11 41 35 31 2 1 2 12 53 51 38 41 2 3 2 1 3 2 31 52 83 56 8OutputYES
+YES
+NO
+YES
+YES
+YES
+NO
+YES
+YES"
+2030E,MEXimize the Score,"combinatorics, data structures, dp, greedy, implementation, math",2 seconds,256 megabytes,"Suppose we partition the elements of an array $$$b$$$ into any number $$$k$$$ of non-empty multisets $$$S_1, S_2, \ldots, S_k$$$, where $$$k$$$ is an arbitrary positive integer. Define thescoreof $$$b$$$ as the maximum value of $$$\operatorname{MEX}(S_1)$$$$$$^{\text{∗}}$$$$$$ + \operatorname{MEX}(S_2) + \ldots + \operatorname{MEX}(S_k)$$$ over all possible partitions of $$$b$$$ for any integer $$$k$$$.Envy is given an array $$$a$$$ of size $$$n$$$. Since he knows that calculating thescoreof $$$a$$$ is too easy for you, he instead asks you to calculate the sum ofscoresof all $$$2^n - 1$$$ non-empty subsequences of $$$a$$$.$$$^{\text{†}}$$$ Since this answer may be large, please output it modulo $$$998\,244\,353$$$.$$$^{\text{∗}}$$$$$$\operatorname{MEX}$$$ of a collection of integers $$$c_1, c_2, \ldots, c_k$$$ is defined as the smallest non-negative integer $$$x$$$ that does not occur in the collection $$$c$$$. For example, $$$\operatorname{MEX}([0,1,2,2]) = 3$$$ and $$$\operatorname{MEX}([1,2,2]) = 0$$$$$$^{\text{†}}$$$A sequence $$$x$$$ is a subsequence of a sequence $$$y$$$ if $$$x$$$ can be obtained from $$$y$$$ by deleting several (possibly, zero or all) elements.
+
+Sample Tests:
+ExampleInput430 0 140 0 1 150 0 1 2 241 1 1 1Output11
+26
+53
+0"
+2030D,QED's Favorite Permutation,"data structures, implementation, sortings",2 seconds,256 megabytes,"QED is given a permutation$$$^{\text{∗}}$$$ $$$p$$$ of length $$$n$$$. He also has a string $$$s$$$ of length $$$n$$$ containing only characters $$$\texttt{L}$$$ and $$$\texttt{R}$$$. QED only likes permutations that are sorted in non-decreasing order. To sort $$$p$$$, he can select any of the following operations and perform them any number of times:Choose an index $$$i$$$ such that $$$s_i = \texttt{L}$$$. Then, swap $$$p_i$$$ and $$$p_{i-1}$$$. It is guaranteed that $$$s_1 \neq \texttt{L}$$$.Choose an index $$$i$$$ such that $$$s_i = \texttt{R}$$$. Then, swap $$$p_i$$$ and $$$p_{i+1}$$$. It is guaranteed that $$$s_n \neq \texttt{R}$$$.He is also given $$$q$$$ queries. In each query, he selects an index $$$i$$$ and changes $$$s_i$$$ from $$$\texttt{L}$$$ to $$$\texttt{R}$$$ (or from $$$\texttt{R}$$$ to $$$\texttt{L}$$$). Note that the changes arepersistent.After each query, he asks you if it is possible to sort $$$p$$$ in non-decreasing order by performing the aforementioned operations any number of times. Note that before answering each query, the permutation $$$p$$$ is reset to its original form.$$$^{\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array).
+
+Sample Tests:
+ExampleInput35 31 4 2 5 3RLRLL2438 51 5 2 4 8 3 6 7RRLLRRRL435346 21 2 3 4 5 6RLRLRL45OutputYES
+YES
+NO
+NO
+YES
+NO
+NO
+NO
+YES
+YES"
+2030C,A TRUE Battle,"brute force, games, greedy",2 seconds,256 megabytes,"Alice and Bob are playing a game. There is a list of $$$n$$$ booleans, each of which is eithertrueorfalse, given as a binary string $$$^{\text{∗}}$$$ of length $$$n$$$ (where $$$\texttt{1}$$$ representstrue, and $$$\texttt{0}$$$ representsfalse). Initially, there are no operators between the booleans.Alice and Bob will take alternate turns placingandororbetween the booleans, with Alice going first. Thus, the game will consist of $$$n-1$$$ turns since there are $$$n$$$ booleans. Alice aims for the final statement to evaluate totrue, while Bob aims for it to evaluate tofalse. Given the list of boolean values, determine whether Alice will win if both players play optimally.To evaluate the final expression, repeatedly perform the following steps until the statement consists of a singletrueorfalse:If the statement contains anandoperator, choose any one and replace the subexpression surrounding it with its evaluation.Otherwise, the statement contains anoroperator. Choose any one and replace the subexpression surrounding theorwith its evaluation.For example, the expressiontrue or false and falseis evaluated astrue or (false and false)$$$=$$$true or false$$$=$$$true. It can be shown that the result of any compound statement is unique.$$$^{\text{∗}}$$$A binary string is a string that only consists of characters $$$\texttt{0}$$$ and $$$\texttt{1}$$$
+
+Sample Tests:
+ExampleInput5211301012101111111100100111111011801000010OutputYES
+NO
+YES
+YES
+NO"
+2030B,Minimise Oneness,"combinatorics, constructive algorithms, games, math",1.5 seconds,256 megabytes,"For an arbitrary binary string $$$t$$$$$$^{\text{∗}}$$$, let $$$f(t)$$$ be the number of non-empty subsequences$$$^{\text{†}}$$$ of $$$t$$$ that contain only $$$\mathtt{0}$$$, and let $$$g(t)$$$ be the number of non-empty subsequences of $$$t$$$ that contain at least one $$$\mathtt{1}$$$.Note that for $$$f(t)$$$ and for $$$g(t)$$$, each subsequence is counted as many times as it appears in $$$t$$$. E.g., $$$f(\mathtt{000}) = 7, g(\mathtt{100}) = 4$$$.We define theonenessof the binary string $$$t$$$ to be $$$|f(t)-g(t)|$$$, where for an arbitrary integer $$$z$$$, $$$|z|$$$ represents the absolute value of $$$z$$$.You are given a positive integer $$$n$$$. Find a binary string $$$s$$$ of length $$$n$$$ such that itsonenessis as small as possible. If there are multiple strings, you can print any of them.$$$^{\text{∗}}$$$A binary string is a string that only consists of characters $$$\texttt{0}$$$ and $$$\texttt{1}$$$.$$$^{\text{†}}$$$A sequence $$$a$$$ is a subsequence of a sequence $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements. For example, subsequences of $$$\mathtt{1011101}$$$ are $$$\mathtt{0}$$$, $$$\mathtt{1}$$$, $$$\mathtt{11111}$$$, $$$\mathtt{0111}$$$, but not $$$\mathtt{000}$$$ nor $$$\mathtt{11100}$$$.
+
+Sample Tests:
+ExampleInput3123Output0
+01
+010"
+2030A,A Gift From Orangutan,"constructive algorithms, greedy, math, sortings",1 second,256 megabytes,"While exploring the jungle, you have bumped into a rare orangutan with a bow tie! You shake hands with the orangutan and offer him some food and water. In return...The orangutan has gifted you an array $$$a$$$ of length $$$n$$$. Using $$$a$$$, you will construct two arrays $$$b$$$ and $$$c$$$, both containing $$$n$$$ elements, in the following manner:$$$b_i = \min(a_1, a_2, \ldots, a_i)$$$ for each $$$1 \leq i \leq n$$$.$$$c_i = \max(a_1, a_2, \ldots, a_i)$$$ for each $$$1 \leq i \leq n$$$.Define thescoreof $$$a$$$ as $$$\sum_{i=1}^n c_i - b_i$$$ (i.e. the sum of $$$c_i - b_i$$$ over all $$$1 \leq i \leq n$$$). Before you calculate thescore, you canshufflethe elements of $$$a$$$ however you want.Find the maximumscorethat you can get if you shuffle the elements of $$$a$$$ optimally.
+
+Sample Tests:
+ExampleInput316937 6 551 1 1 2 2Output0
+4
+4"
+2027E2,Bit Game (Hard Version),"bitmasks, dp, math",2 seconds,256 megabytes,"This is the hard version of this problem. The only difference is that you need to output the number of choices of games where Bob wins in this version, where the number of stones in each pile are not fixed. You must solve both versions to be able to hack.Alice and Bob are playing a familiar game where they take turns removing stones from $$$n$$$ piles. Initially, there are $$$x_i$$$ stones in the $$$i$$$-th pile, and it has an associated value $$$a_i$$$. A player can take $$$d$$$ stones away from the $$$i$$$-th pile if and only if both of the following conditions are met:$$$1 \le d \le a_i$$$, and$$$x \, \& \, d = d$$$, where $$$x$$$ is the current number of stones in the $$$i$$$-th pile and $$$\&$$$ denotes thebitwise AND operation.The player who cannot make a move loses, and Alice goes first.You're given the $$$a_i$$$ values of each pile, but the number of stones in the $$$i$$$-th pile has not been determined yet. For the $$$i$$$-th pile, $$$x_i$$$ can be any integer between $$$1$$$ and $$$b_i$$$, inclusive. That is, you can choose an array $$$x_1, x_2, \ldots, x_n$$$ such that the condition $$$1 \le x_i \le b_i$$$ is satisfied for all piles.Your task is to count the number of games where Bob wins if both players play optimally. Two games are considered different if the number of stones in any pile is different, i.e., the arrays of $$$x$$$ differ in at least one position.Since the answer can be very large, please output the result modulo $$$10^9 + 7$$$.
+
+Sample Tests:
+ExampleInput731 2 33 2 21134555 4 7 8 64 4 5 5 546 4 8 812 13 14 12392856133 46637598 1234567829384774 73775896 87654321265 12110 314677810235 275091182 428565855 72062973174522416 889934149 3394714 230851724Output4
+4
+0
+6552
+722019507
+541
+665443265"
+2027E1,Bit Game (Easy Version),"bitmasks, brute force, games, math",2 seconds,256 megabytes,"This is the easy version of this problem. The only difference is that you need to output the winner of the game in this version, and the number of stones in each pile are fixed. You must solve both versions to be able to hack.Alice and Bob are playing a familiar game where they take turns removing stones from $$$n$$$ piles. Initially, there are $$$x_i$$$ stones in the $$$i$$$-th pile, and it has an associated value $$$a_i$$$. A player can take $$$d$$$ stones away from the $$$i$$$-th pile if and only if both of the following conditions are met:$$$1 \le d \le a_i$$$, and$$$x \, \& \, d = d$$$, where $$$x$$$ is the current number of stones in the $$$i$$$-th pile and $$$\&$$$ denotes thebitwise AND operation.The player who cannot make a move loses, and Alice goes first.You're given the $$$a_i$$$ and $$$x_i$$$ values for each pile, please determine who will win the game if both players play optimally.
+
+Sample Tests:
+ExampleInput721 610 7310 8 1525 4 1448 32 65 647 45 126 94320 40 123 55 1512345 9876 86419 8641 16789 54321 7532 97532 1220 6444 61357 109 5569 90 85OutputBob
+Bob
+Bob
+Bob
+Bob
+Alice
+Alice"
+2027D2,The Endspeaker (Hard Version),"binary search, data structures, dp, greedy, implementation, two pointers",2 seconds,256 megabytes,"This is the hard version of this problem. The only difference is that you need to also output the number of optimal sequences in this version. You must solve both versions to be able to hack.You're given an array $$$a$$$ of length $$$n$$$, and an array $$$b$$$ of length $$$m$$$ ($$$b_i > b_{i+1}$$$ for all $$$1 \le i < m$$$). Initially, the value of $$$k$$$ is $$$1$$$. Your aim is to make the array $$$a$$$ empty by performing one of these two operations repeatedly:Type $$$1$$$ — If the value of $$$k$$$ is less than $$$m$$$ and the array $$$a$$$ isnot empty, you can increase the value of $$$k$$$ by $$$1$$$. This does not incur any cost.Type $$$2$$$ — You remove a non-empty prefix of array $$$a$$$, such that its sum does not exceed $$$b_k$$$. This incurs a cost of $$$m - k$$$.You need to minimize the total cost of the operations to make array $$$a$$$ empty. If it's impossible to do this through any sequence of operations, output $$$-1$$$. Otherwise, output the minimum total cost of the operations, and the number of sequences of operations which yield this minimum cost modulo $$$10^9 + 7$$$.Two sequences of operations are considered different if you choose a different type of operation at any step, or the size of the removed prefix is different at any step.
+
+Sample Tests:
+ExampleInput54 29 3 4 311 71 22019 1810 22 5 2 1 10 3 2 9 9 617 910 112 2 2 2 2 2 2 2 2 220 18 16 14 12 10 8 6 4 2 11 61032 16 8 4 2 1Output1 3
+-1
+2 11
+10 42
+4 1"
